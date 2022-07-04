@@ -1,2 +1,4 @@
 # Laser Defender
-Space craft shooter 2D game using Unity 
+
+
+Spaceship shooter 2D game using unity Engine
