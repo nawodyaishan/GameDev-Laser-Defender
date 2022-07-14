@@ -7,10 +7,18 @@ public class Player : MonoBehaviour
 {
     private Vector2 _rawInput;
     [SerializeField] private float moveSpeed = 6f;
+    private Vector2 _minBound;
+    private Vector2 _maxBound;
+
+    [SerializeField] private float leftPadding;
+    [SerializeField] private float rightPadding;
+    [SerializeField] private float topPadding;
+    [SerializeField] private float bottomPadding;
 
     // Start is called before the first frame update
     void Start()
     {
+        InitBounds();
     }
 
     // Update is called once per frame
@@ -21,10 +29,21 @@ public class Player : MonoBehaviour
 
     private void PlayerMove()
     {
-        Vector3 delta = _rawInput * (moveSpeed * Time.deltaTime);
-        transform.position += delta;
+        Vector2 delta = _rawInput * (moveSpeed * Time.deltaTime);
+        Vector2 newPos = new Vector2();
+
+        var position = transform.position;
+        newPos.x = Mathf.Clamp(position.x + delta.x, _minBound.x + leftPadding, _maxBound.x - rightPadding);
+        newPos.y = Mathf.Clamp(position.y + delta.y, _minBound.y + bottomPadding, _maxBound.y - topPadding);
+        transform.position = newPos;
     }
 
+    void InitBounds()
+    {
+        Camera mainCamera = Camera.main;
+        _minBound = mainCamera.ViewportToWorldPoint(Vector2.zero);
+        _maxBound = mainCamera.ViewportToWorldPoint(new Vector2(1, 1));
+    }
 
     void OnMove(InputValue inputValue)
     {
