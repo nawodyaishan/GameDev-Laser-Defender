@@ -8,7 +8,7 @@ namespace Data
     {
         [SerializeField] Transform pathPrefab;
         [SerializeField] float moveSpeed = 5f;
-        [SerializeField] private List<GameObject> enemyPrefabObjects;
+        [SerializeField] List<GameObject> enemyPrefabObjects;
 
         public Transform GetStartingWaypoint()
         {
