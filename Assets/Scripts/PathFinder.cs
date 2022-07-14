@@ -15,7 +15,6 @@ public class PathFinder : MonoBehaviour
     {
         _wayPoints = waveConfigSo.GetWaypoints();
         transform.position = _wayPoints[_waypointIndex].position;
-        Debug.Log(transform.position);
     }
 
     // Update is called once per frame
@@ -31,7 +30,7 @@ public class PathFinder : MonoBehaviour
             Vector3 targetPosition = _wayPoints[_waypointIndex].position;
             float delta = waveConfigSo.GetMoveSpeed() * Time.deltaTime;
             transform.position = Vector3.MoveTowards(transform.position, targetPosition, delta);
-            
+
             // Checking whether the same position
             if (transform.position == targetPosition)
             {
