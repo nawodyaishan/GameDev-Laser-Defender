@@ -3,11 +3,11 @@ using UnityEngine;
 
 namespace Data
 {
-    [CreateAssetMenu(menuName = "Wave Config", fileName = "New Wave Config")]
+    [CreateAssetMenu(menuName = "Wave Config", fileName = "Wave ")]
     public class WaveConfigSo : ScriptableObject
     {
         [SerializeField] Transform pathPrefab;
-        [SerializeField] float moveSpeed;
+        [SerializeField] float moveSpeed = 5f;
 
         public Transform GetStartingWaypoint()
         {
@@ -19,7 +19,7 @@ namespace Data
         {
             List<Transform> waypoints = new List<Transform>();
 
-            foreach (var child in waypoints)
+            foreach (Transform child in pathPrefab)
             {
                 waypoints.Add(child);
             }
@@ -29,7 +29,7 @@ namespace Data
 
         public float GetMoveSpeed()
         {
-            return this.moveSpeed;
+            return moveSpeed;
         }
     }
 }
