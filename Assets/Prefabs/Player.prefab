@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: -6758736135231279133}
   - component: {fileID: -6090836723552424995}
   - component: {fileID: -2056232483752739769}
+  - component: {fileID: 2759461951578334314}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -134,6 +135,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+--- !u!114 &2759461951578334314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3326227370648292341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ddac4bc4d8f645bea5e424de50cefb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerProjectileLaserPrefab: {fileID: 3950482830726133870, guid: c88db59eca3f24782a9f881d13f294ec, type: 3}
+  projectileSpeed: 15
+  projectileLifetime: 3
+  firingRate: 1
+  isFiring: 0
 --- !u!1 &8681312738851301609
 GameObject:
   m_ObjectHideFlags: 0

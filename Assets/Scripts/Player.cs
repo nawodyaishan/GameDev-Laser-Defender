@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Rendering;
 
 public class Player : MonoBehaviour
 {
@@ -14,6 +16,14 @@ public class Player : MonoBehaviour
     [SerializeField] private float rightPadding;
     [SerializeField] private float topPadding;
     [SerializeField] private float bottomPadding;
+
+    private Shooter _shooter;
+
+    private void Awake()
+    {
+        _shooter = GetComponent<Shooter>();
+    }
+
 
     // Start is called before the first frame update
     void Start()
@@ -48,6 +58,17 @@ public class Player : MonoBehaviour
     void OnMove(InputValue inputValue)
     {
         _rawInput = inputValue.Get<Vector2>();
-        Debug.Log(_rawInput);
     }
+
+    void OnFire(InputValue fireInputValue)
+    {
+        if (_shooter)
+        {
+            _shooter.isFiring = fireInputValue.isPressed;
+        }
+        
+    }
+    
+    
+    
 }
