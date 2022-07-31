@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3950482830726133858}
   - component: {fileID: 3950482830726133857}
   - component: {fileID: 3950482830726133859}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Projectile Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69,8 +69,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.000000007450581, y: 0.0005065501}
-  m_Size: {x: 0.09254272, y: 0.36574274}
+  m_Offset: {x: -0.00050647557, y: 0.0005065501}
+  m_Size: {x: 0.10773714, y: 0.44272774}
   m_Direction: 0
 --- !u!114 &3950482830726133859
 MonoBehaviour:
@@ -95,7 +95,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8863438692974587715}
   - component: {fileID: 7448003122036104231}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: laserRed07
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -157,7 +157,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 9
   m_Sprite: {fileID: 21300000, guid: bc871252458f846d1868a619dd641b58, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

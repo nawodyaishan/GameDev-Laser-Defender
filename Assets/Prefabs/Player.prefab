@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: -6758736135231279133}
   - component: {fileID: -6090836723552424995}
   - component: {fileID: -2056232483752739769}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -144,9 +144,9 @@ GameObject:
   m_Component:
   - component: {fileID: 71576878562743118}
   - component: {fileID: 2139622770474360237}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: playerShip1_blue
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -206,7 +206,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: 86f628d5dd63143919fe16dc8f8c5890, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
