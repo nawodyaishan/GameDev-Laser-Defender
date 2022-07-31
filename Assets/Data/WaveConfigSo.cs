@@ -9,6 +9,9 @@ namespace Data
         [SerializeField] Transform pathPrefab;
         [SerializeField] float moveSpeed = 5f;
         [SerializeField] List<GameObject> enemyPrefabObjects;
+        [SerializeField] private float timeBetweenSpawns = 0.7f;
+        [SerializeField] private float spawnTimeVariance = 0f;
+        [SerializeField] private float minimumSpawnTime = 0.2f;
 
         public Transform GetStartingWaypoint()
         {
@@ -41,6 +44,13 @@ namespace Data
         public int GetEnemyCount()
         {
             return enemyPrefabObjects.Count;
+        }
+
+        public float GetRandomSpawnTime()
+        {
+            float spawnTime =
+                Random.Range(timeBetweenSpawns - spawnTimeVariance, timeBetweenSpawns + spawnTimeVariance);
+            return Mathf.Clamp(spawnTime, minimumSpawnTime, float.MaxValue);
         }
     }
 }
