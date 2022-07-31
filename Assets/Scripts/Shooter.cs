@@ -14,7 +14,7 @@ public class Shooter : MonoBehaviour
     public bool isFiring;
 
     private Coroutine _firingCoroutine;
-    
+
     private void Update()
     {
         Fire();
